@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Quiz - QuizMaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎓 QuizMaster - History</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2>📚 History Quiz</h2>
+                <p>Test your knowledge of world history and ancient civilizations</p>
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                    <span id="question-counter">Question 1 of 10</span>
+                    <div class="timer" id="timer">5:00</div>
+                </div>
+            </div>
+
+            <div id="quiz-content">
+                <div id="question-container">
+                    <!-- Questions will be loaded here by JavaScript -->
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>
+                        Previous
+                    </button>
+                    <button class="btn" id="next-btn" onclick="nextQuestion()" disabled>
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // History questions
+        const historyQuestions = [
+            {
+                question: "In which year did World War II end?",
+                options: ["1944", "1945", "1946", "1947"],
+                correct: 1
+            },
+            {
+                question: "Who was the first President of the United States?",
+                options: ["Thomas Jefferson", "John Adams", "George Washington", "Benjamin Franklin"],
+                correct: 2
+            },
+            {
+                question: "Which ancient wonder of the world was located in Alexandria?",
+                options: ["Hanging Gardens", "Lighthouse of Alexandria", "Colossus of Rhodes", "Statue of Zeus"],
+                correct: 1
+            },
+            {
+                question: "The French Revolution began in which year?",
+                options: ["1789", "1799", "1804", "1815"],
+                correct: 0
+            },
+            {
+                question: "Which empire was ruled by Julius Caesar?",
+                options: ["Greek Empire", "Roman Empire", "Persian Empire", "Egyptian Empire"],
+                correct: 1
+            },
+            {
+                question: "Who painted the ceiling of the Sistine Chapel?",
+                options: ["Leonardo da Vinci", "Raphael", "Michelangelo", "Donatello"],
+                correct: 2
+            },
+            {
+                question: "The Great Wall of China was primarily built during which dynasty?",
+                options: ["Han Dynasty", "Tang Dynasty", "Ming Dynasty", "Qing Dynasty"],
+                correct: 2
+            },
+            {
+                question: "Which explorer is credited with discovering America in 1492?",
+                options: ["Vasco da Gama", "Christopher Columbus", "Ferdinand Magellan", "Marco Polo"],
+                correct: 1
+            },
+            {
+                question: "The Industrial Revolution began in which country?",
+                options: ["France", "Germany", "United States", "England"],
+                correct: 3
+            },
+            {
+                question: "Who was known as the 'Iron Lady'?",
+                options: ["Queen Elizabeth II", "Margaret Thatcher", "Indira Gandhi", "Golda Meir"],
+                correct: 1
+            }
+        ];
+
+        function initializeQuiz() {
+            window.currentQuiz = new QuizApp(historyQuestions, 'History');
+        }
+    </script>
+</body>
+</html>

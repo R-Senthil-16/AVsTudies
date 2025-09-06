@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Quiz - QuizMaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎓 QuizMaster - Geography</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2>🌍 Geography Quiz</h2>
+                <p>Test your knowledge of world geography, maps, and climate</p>
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                    <span id="question-counter">Question 1 of 10</span>
+                    <div class="timer" id="timer">5:00</div>
+                </div>
+            </div>
+
+            <div id="quiz-content">
+                <div id="question-container">
+                    <!-- Questions will be loaded here by JavaScript -->
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>
+                        Previous
+                    </button>
+                    <button class="btn" id="next-btn" onclick="nextQuestion()" disabled>
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Geography questions
+        const geographyQuestions = [
+            {
+                question: "What is the capital of Australia?",
+                options: ["Sydney", "Melbourne", "Canberra", "Perth"],
+                correct: 2
+            },
+            {
+                question: "Which is the longest river in the world?",
+                options: ["Amazon River", "Nile River", "Mississippi River", "Yangtze River"],
+                correct: 1
+            },
+            {
+                question: "What is the smallest continent?",
+                options: ["Europe", "Antarctica", "Australia", "South America"],
+                correct: 2
+            },
+            {
+                question: "Which mountain range contains Mount Everest?",
+                options: ["Andes", "Rocky Mountains", "Alps", "Himalayas"],
+                correct: 3
+            },
+            {
+                question: "What is the largest ocean on Earth?",
+                options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+                correct: 3
+            },
+            {
+                question: "Which country has the most time zones?",
+                options: ["Russia", "United States", "China", "Canada"],
+                correct: 0
+            },
+            {
+                question: "What is the driest desert in the world?",
+                options: ["Sahara Desert", "Gobi Desert", "Atacama Desert", "Kalahari Desert"],
+                correct: 2
+            },
+            {
+                question: "Which African country is completely surrounded by South Africa?",
+                options: ["Botswana", "Lesotho", "Swaziland", "Zimbabwe"],
+                correct: 1
+            },
+            {
+                question: "What is the deepest point on Earth?",
+                options: ["Mariana Trench", "Puerto Rico Trench", "Java Trench", "Peru-Chile Trench"],
+                correct: 0
+            },
+            {
+                question: "Which European country is shaped like a boot?",
+                options: ["Spain", "Greece", "Italy", "Portugal"],
+                correct: 2
+            }
+        ];
+
+        function initializeQuiz() {
+            window.currentQuiz = new QuizApp(geographyQuestions, 'Geography');
+        }
+    </script>
+</body>
+</html>
