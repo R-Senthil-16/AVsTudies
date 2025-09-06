@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Class 10 Science - Previous Year Questions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎓 CBSE Class 10 - Science</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2>🔬 CBSE Class 10 Science</h2>
+                <p>Previous Year Board Examination Questions - Physics, Chemistry & Biology</p>
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                    <span id="question-counter">Question 1 of 10</span>
+                    <div class="timer" id="timer">5:00</div>
+                </div>
+            </div>
+
+            <div id="quiz-content">
+                <div id="question-container">
+                    <!-- Questions will be loaded here by JavaScript -->
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>
+                        Previous
+                    </button>
+                    <button class="btn" id="next-btn" onclick="nextQuestion()" disabled>
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // CBSE Class 10 Science Previous Year Questions
+        const scienceQuestions = [
+            {
+                question: "Which of the following is a characteristic of sexual reproduction?",
+                options: ["Involves only one parent", "Produces genetically identical offspring", "Involves fusion of gametes", "Faster than asexual reproduction"],
+                correct: 2
+            },
+            {
+                question: "The pH of lemon juice is approximately:",
+                options: ["2", "7", "9", "14"],
+                correct: 0
+            },
+            {
+                question: "Which of the following is not a renewable source of energy?",
+                options: ["Solar energy", "Wind energy", "Coal", "Tidal energy"],
+                correct: 2
+            },
+            {
+                question: "The image formed by a concave mirror when the object is placed beyond the centre of curvature is:",
+                options: ["Real, inverted and diminished", "Real, inverted and magnified", "Virtual, erect and magnified", "Virtual, erect and diminished"],
+                correct: 0
+            },
+            {
+                question: "Which of the following elements exhibit maximum number of valencies?",
+                options: ["Carbon", "Nitrogen", "Sulphur", "Chlorine"],
+                correct: 2
+            },
+            {
+                question: "The process of breakdown of glucose in the absence of oxygen is called:",
+                options: ["Aerobic respiration", "Anaerobic respiration", "Fermentation", "Both (b) and (c)"],
+                correct: 3
+            },
+            {
+                question: "Which of the following salts does not contain water of crystallisation?",
+                options: ["Blue vitriol", "Baking soda", "Washing soda", "Gypsum"],
+                correct: 1
+            },
+            {
+                question: "The resistance of a conductor depends on:",
+                options: ["Length of the conductor", "Area of cross-section", "Nature of material", "All of the above"],
+                correct: 3
+            },
+            {
+                question: "Which of the following is the correct sequence of events in sexual reproduction?",
+                options: ["Gamete formation → Fertilisation → Zygote → Offspring", "Fertilisation → Gamete formation → Zygote → Offspring", "Fertilisation → Zygote → Gamete formation → Offspring", "Gamete formation → Zygote → Fertilisation → Offspring"],
+                correct: 0
+            },
+            {
+                question: "The metal that is liquid at room temperature is:",
+                options: ["Sodium", "Mercury", "Bromine", "Chlorine"],
+                correct: 1
+            },
+            {
+                question: "Which of the following is a biodegradable material?",
+                options: ["Plastic", "Glass", "Paper", "Aluminium"],
+                correct: 2
+            },
+            {
+                question: "The gas evolved when zinc reacts with dilute hydrochloric acid is:",
+                options: ["Oxygen", "Chlorine", "Hydrogen", "Nitrogen"],
+                correct: 2
+            },
+            {
+                question: "Which part of the brain controls involuntary actions?",
+                options: ["Cerebrum", "Cerebellum", "Medulla", "Spinal cord"],
+                correct: 2
+            },
+            {
+                question: "The SI unit of electric current is:",
+                options: ["Volt", "Ampere", "Ohm", "Watt"],
+                correct: 1
+            },
+            {
+                question: "Which hormone is responsible for the regulation of blood sugar?",
+                options: ["Insulin", "Thyroxine", "Adrenaline", "Growth hormone"],
+                correct: 0
+            },
+            {
+                question: "The process by which green plants make their food is called:",
+                options: ["Respiration", "Photosynthesis", "Transpiration", "Digestion"],
+                correct: 1
+            },
+            {
+                question: "Which of the following is a fossil fuel?",
+                options: ["Wood", "Coal", "Alcohol", "Hydrogen"],
+                correct: 1
+            },
+            {
+                question: "The lens used to correct myopia is:",
+                options: ["Convex lens", "Concave lens", "Bifocal lens", "Cylindrical lens"],
+                correct: 1
+            },
+            {
+                question: "Which gas is produced during photosynthesis?",
+                options: ["Carbon dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+                correct: 2
+            }
+        ];
+
+        function initializeQuiz() {
+            window.currentQuiz = new QuizApp(scienceQuestions, 'Science');
+        }
+    </script>
+</body>
+</html>

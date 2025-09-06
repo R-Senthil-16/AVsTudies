@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Class 10 Social Studies - Previous Year Questions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎓 CBSE Class 10 - Social Studies</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2>🏛️ CBSE Class 10 Social Studies</h2>
+                <p>Previous Year Board Examination Questions - History, Geography, Civics & Economics</p>
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                    <span id="question-counter">Question 1 of 10</span>
+                    <div class="timer" id="timer">5:00</div>
+                </div>
+            </div>
+
+            <div id="quiz-content">
+                <div id="question-container">
+                    <!-- Questions will be loaded here by JavaScript -->
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>
+                        Previous
+                    </button>
+                    <button class="btn" id="next-btn" onclick="nextQuestion()" disabled>
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // CBSE Class 10 Social Studies Previous Year Questions
+        const socialStudiesQuestions = [
+            {
+                question: "The nationalist movement in Indo-China was led by:",
+                options: ["Ho Chi Minh", "Sun Yat-Sen", "Chiang Kai-shek", "Mao Zedong"],
+                correct: 0
+            },
+            {
+                question: "Which one of the following is a renewable resource?",
+                options: ["Coal", "Petroleum", "Iron ore", "Groundwater"],
+                correct: 3
+            },
+            {
+                question: "In which one of the following forms of government is power shared among different organs of government?",
+                options: ["Community government", "Federal government", "Unitary government", "None of these"],
+                correct: 1
+            },
+            {
+                question: "Which one of the following sectors is the largest employer in India?",
+                options: ["Primary", "Secondary", "Tertiary", "Organized"],
+                correct: 0
+            },
+            {
+                question: "The main reason for the growth of nationalist tensions in the Balkans was:",
+                options: ["Disintegration of Ottoman Empire", "Great power rivalry", "Ideas of romantic nationalism", "All of the above"],
+                correct: 3
+            },
+            {
+                question: "Which one of the following describes a major change in the political and constitutional scenario due to the French Revolution in Europe?",
+                options: ["The transfer of sovereignty from the monarchy to a body of French citizens", "The destruction of democracy in France", "The abolition of all religions", "The collapse of the French state"],
+                correct: 0
+            },
+            {
+                question: "Which one of the following is the most abundant mineral in the lithosphere?",
+                options: ["Silicon", "Aluminium", "Iron", "Magnesium"],
+                correct: 1
+            },
+            {
+                question: "Power sharing is desirable because it:",
+                options: ["Reduces conflict among different groups", "Decreases the possibility of tyranny", "Accommodates diversities", "All of the above"],
+                correct: 3
+            },
+            {
+                question: "Which one of the following examples does not correspond to unorganised sector?",
+                options: ["A farmer irrigating his field", "A daily wage labourer working under a contractor", "A doctor in a hospital treating a patient", "A handloom weaver working on a loom in her house"],
+                correct: 2
+            },
+            {
+                question: "Which one of the following was the reason for calling off the Non-Cooperation Movement by Gandhiji?",
+                options: ["Pressure from the British government", "Violence at Chauri Chaura", "Arrest of Abul Kalam Azad", "Excessive support from the masses"],
+                correct: 1
+            }
+        ];
+
+        function initializeQuiz() {
+            window.currentQuiz = new QuizApp(socialStudiesQuestions, 'Social Studies');
+        }
+    </script>
+</body>
+</html>

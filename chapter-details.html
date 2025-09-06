@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🎓 <span id="chapter-title"></span></h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="chapter-summary">
+            <h2>Chapter Summary</h2>
+            <div id="summary-content" class="content-box">
+                <!-- Summary will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="chapter-quiz">
+            <h2>Ready to Test Your Knowledge?</h2>
+            <p>Take a short quiz to see how well you understood the chapter.</p>
+            <button id="start-quiz-btn" class="btn">Start Quiz</button>
+        </section>
+        
+        <a id="back-to-chapters" href="#" class="back-link" style="margin-top: 2rem; display: inline-block;">← Back to Chapters</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
